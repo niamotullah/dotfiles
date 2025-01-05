@@ -67,6 +67,8 @@ animation = "Ease"
 duration = 5
 color = "#ffaa00"
 
+[terminal]
 
-[shell]
+
+[terminal.shell]
 program = "/usr/bin/zsh"
