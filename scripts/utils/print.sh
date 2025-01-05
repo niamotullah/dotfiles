@@ -39,20 +39,20 @@ printWarn() {
 
 # Print a success message
 printSuccess() {
-	echo -e "${GREEN}${SUCCESS} $1${RESET}"
+	echo -e "${GREEN}${SUCCESS}${RESET} $1"
 	logToFile "${SUCCESS} $1"
 }
 
 # Print an informational message
 printInfo() {
-	echo -e "${CYAN}${INFO} $1${RESET}"
+	echo -e "${CYAN}${INFO}${RESET} $1"
 	logToFile "${INFO} $1"
 }
 
 # Print a debug message (only if DEBUG_MODE is enabled)
 printDebug() {
 	if [ "$DEBUG_MODE" = "true" ]; then
-		echo -e "${CYAN}${DEBUG} $1${RESET}"
+		echo -e "${CYAN}${DEBUG}${RESET} $1"
 		logToFile "${DEBUG} $1"
 	fi
 }
