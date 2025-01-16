@@ -27,13 +27,13 @@ LOG_FILE="$LOG_DIR/deploy_$(date '+%Y%m%d_%H%M%S').log"
 
 # Print an error message
 printErr() {
-	echo -e "${RED}${ERROR} $1${RESET}"
+	echo -e "${RED} ${ERROR} ${RESET} $1"
 	logToFile "${ERROR} $1"
 }
 
 # Print a warning message
 printWarn() {
-	echo -e "${YELLOW}${WARN} $1${RESET}"
+	echo -e "${YELLOW} ${WARN} ${RESET} $1"
 	logToFile "${WARN} $1"
 }
 
