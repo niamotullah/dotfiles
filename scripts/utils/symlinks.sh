@@ -21,6 +21,13 @@ create_symlink() {
 	local source=$1
 	local destination=$2
 
+	# Check if the destination directory exists (for .cargo case)
+        local dest_dir=$(dirname "$destination")
+        if [ ! -d "$dest_dir" ]; then
+		printWarn "Destination '$dest_dir/' does not exist. Skipping symlink for '$source'."
+		return 1
+        fi
+
 	# Check if source exists
 	if [ ! -e "$source" ]; then
 		printErr "Source file or directory '$source' does not exist."
@@ -44,7 +51,6 @@ create_symlink() {
 	fi
 }
 
-# Process symlinks.conf dynamically
 # Process symlinks.conf dynamically
 process_symlinks() {
 	local config_file=$1

@@ -10,7 +10,7 @@ find_symlinks_configs() {
 deploy_symlinks() {
 	# Use DOTFILES_DIR as the root directory
 	real_dotfiles_dir=$(realpath "$DOTFILES_DIR") # Resolve to absolute path
-	printInfo "Searching for 'dotconfig/symlinks.conf' files in $real_dotfiles_dir/"
+	# printInfo "Searching for 'dotconfig/symlinks.conf' files in $real_dotfiles_dir/"
 
 	# Find all 'symlinks.conf' files
 	config_files=$(find_symlinks_configs "$real_dotfiles_dir")
@@ -23,9 +23,9 @@ deploy_symlinks() {
 	# Process each symlinks.conf file
 	while IFS= read -r config_file; do
 		real_config_file=$(realpath "$config_file") # Resolve to absolute path
-		printInfo "Processing symlinks from: $real_config_file"
+		# printInfo "Processing symlinks from: $real_config_file"
 		process_symlinks "$config_file"
 	done <<<"$config_files"
 
-	printSuccess "Deployment completed."
+	# printSuccess "Deployment completed."
 }
