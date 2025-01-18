@@ -1,0 +1,3 @@
+- [ ] add ability to append some configs/text from a TARGET to DEST
+- [ ] add pre_hook.sh and post_hook.sh
+- [ ] configfile encryption
