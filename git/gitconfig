@@ -8,3 +8,5 @@
 	directory = /mnt/01DA59A640DC3EF0/lang/flutter/projects/favorite_places
 	directory = /mnt/01DA59A640DC3EF0/working/ADB-QR
 	directory = /mnt/01DA59A640DC3EF0/Backups/Qbittorrent/qBittorrent-Search-Plugins
+[core]
+	editor = nvim
