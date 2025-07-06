@@ -1,0 +1,25 @@
+From 8b9085831c8b1cd77ca060b11361bed234cda1c3 Mon Sep 17 00:00:00 2001
+From: Niamot <58494481+niamotullah@users.noreply.github.com>
+Date: Sun, 6 Jul 2025 17:44:00 +0600
+Subject: [PATCH] fix: auto-removing trailing_commas to preserve
+
+---
+ .../flutter_tools/templates/app/analysis_options.yaml.tmpl   | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/packages/flutter_tools/templates/app/analysis_options.yaml.tmpl b/packages/flutter_tools/templates/app/analysis_options.yaml.tmpl
+index 7a98d8c1854..cf0969ae47d 100644
+--- a/packages/flutter_tools/templates/app/analysis_options.yaml.tmpl
++++ b/packages/flutter_tools/templates/app/analysis_options.yaml.tmpl
+@@ -30,3 +30,8 @@ linter:
+ # Additional information about this file can be found at
+ # https://dart.dev/guides/language/analysis-options
+ {{/withEmptyMain}}
++
++
++# Add trailing commas to preserve formatting
++formatter:
++  trailing_commas: preserve
+-- 
+2.43.0
+
