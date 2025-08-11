@@ -1,8 +1,8 @@
 [window]
 opacity = 0.95
 dynamic_title = true
-dynamic_padding = true
-padding = { x = 2 }
+dynamic_padding = false
+padding = { x = 6, y = 0 }
 blur = true
 resize_increments = true
 dimensions = { columns = 90, lines = 25 }
