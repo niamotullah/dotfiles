@@ -1,0 +1,9 @@
+#!/bin/bash
+# Nautilus script to add execute permission to selected file(s)
+
+for file in "$@"; do
+	if [ -f "$file" ]; then
+		chmod +x "$file"
+		notify-send "Permission Added" "Execute permission granted to: $(basename "$file")"
+	fi
+done
