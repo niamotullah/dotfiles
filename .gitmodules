@@ -4,3 +4,6 @@
 [submodule "editor/neovim"]
 	path = editor/neovim
 	url = https://github.com/niamotullah/LazyVim_starter
+[submodule "gnome/extensions/pop_shell"]
+	path = gnome/extensions/pop_shell
+	url = https://github.com/pop-os/shell.git
